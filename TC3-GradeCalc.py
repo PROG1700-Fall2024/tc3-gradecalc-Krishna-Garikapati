@@ -15,15 +15,51 @@
 
 
 def main():
-    # YOUR CODE STARTS HERE, each line must be indented (one tab)
-
-
-
-
-
-
-
-
-    # YOUR CODE ENDS HERE
-
+    #input
+    grade=input("Please enter a letter grade: ")
+    modifier=input("Please enter a modifier (+, - or nothing):")
+    
+    #print statements
+    print("Grade Point Calculator\n")
+    print("Valid letter grades that can be entered: A, B, C, D, F.\nValid grade modifiers are +, - or nothing.\nAll letter grades except F can include a + or - symbol.\nCalculated grade point value cannot exceed 4.0.\n")
+    
+    #conditions
+    if grade.upper()=="A":
+        if modifier=="+":
+            NumericGrade=4.0
+        elif modifier=="-":
+            NumericGrade=(4.0)-(0.3)
+        elif modifier=="":
+            NumericGrade=4.0
+        print("The numeric value is:{0:.1f}".format(NumericGrade))
+    elif grade.upper()=="B":
+        if modifier=="+":
+            NumericGrade=(3.0)+(0.3)
+        elif modifier=="-":
+            NumericGrade=(3.0)-(0.3)
+        elif modifier=="":
+            NumericGrade=3.0
+        print("The numeric value is:{0:.1f}".format(NumericGrade))
+    elif grade.upper()=="C":
+        if modifier=="+":
+            NumericGrade=(2.0)+(0.3)
+        elif modifier=="-":
+            NumericGrade=(2.0)-(0.3)
+        elif modifier=="":
+            NumericGrade=2.0
+        print("The numeric value is:{0:.1f}".format(NumericGrade))
+    elif grade.upper()=="D":
+        if modifier=="+":
+            NumericGrade=(1.0)+(0.3)
+        elif modifier=="-":
+            NumericGrade=(1.0)-(0.3)
+        elif modifier=="":
+            NumericGrade=1.0
+        print("The numeric value is:{0:.1f}".format(NumericGrade))
+    elif grade.upper()=="F":
+        NumericGrade=0
+        print("The numeric value is:{0:.1f}".format(NumericGrade))
+    else:
+        print("You entered an invalid letter grade.\nThe numeric value is: 0.0")
+   
 main()
